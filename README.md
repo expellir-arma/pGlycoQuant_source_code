@@ -4,10 +4,10 @@
 ### Release Date: 2021.08.31
 
 ## Computer configuration
-#### RAM: 16G or higher is recommended
-#### ROM: for one raw data (1G) 5G or higher is recommended
-#### OS: Windows10 or higher
-#### Other: MSFileReader 3.0 Sp1 or higher is needed
+####  RAM: 16G or higher is recommended
+####  ROM: for one raw data (1G) 5G or higher is recommended
+####  OS: Windows10 or higher
+####  Other: MSFileReader 3.0 Sp1 or higher is needed
 
 ## Description
 At present, pFind, pGlyco, Byonic and MSFragger software glycosylation identification results can be used for quantification by pGlycoQuant.
