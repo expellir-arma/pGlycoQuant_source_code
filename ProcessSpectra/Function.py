@@ -2,23 +2,26 @@ import os
 import pickle
 from Tool import *
 
-def FunctionRaw2MS(self, inputListPathRaw):
 
-    exe_MSFileReader = 'MSExport.exe'
-    cfg_MSFileReader = 'MSExport.cfg'
-    path_raw = '|'.join(inputListPathRaw)
+class CRaw2MS:
 
-    with open(cfg_MSFileReader, 'w') as f:
+    def FunctionRaw2MS(self, inputListPathRaw):
 
-        f.write("[Data]\n")
-        f.write("PATH_RAW=" + path_raw + '\n')
+        exe_MSFileReader = 'MSExport.exe'
+        cfg_MSFileReader = 'MSExport.cfg'
+        path_raw = '|'.join(inputListPathRaw)
 
-    cmd = exe_MSFileReader + ' {:s}'.format(cfg_MSFileReader)
+        with open(cfg_MSFileReader, 'w') as f:
 
-    try:
-        os.system(cmd)
-    except:
-        print('MSExport.exe run wrong!')
+            f.write("[Data]\n")
+            f.write("PATH_RAW=" + path_raw + '\n')
+
+        cmd = exe_MSFileReader + ' {:s}'.format(cfg_MSFileReader)
+
+        try:
+            os.system(cmd)
+        except:
+            print('MSExport.exe run wrong!')
 
 class CFileMS2:
 

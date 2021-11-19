@@ -20,8 +20,8 @@ class ProcessSpectra:
 
             LIST_PATH_RAW = []
             op_FILL_LIST_PATH_MS(PATH_MS2, LIST_PATH_RAW, [".raw"])
-            functionRaw2MS = FunctionRaw2MS()
-            functionRaw2MS.raw2MS(LIST_PATH_RAW)
+            functionRaw2MS = CRaw2MS()
+            functionRaw2MS.FunctionRaw2MS(LIST_PATH_RAW)
             self.LIST_PATH_MS2 = [i_raw.replace('.raw', '.ms2') for i_raw in LIST_PATH_RAW]
 
         if TYPE_QUANT == self.CFG_TYPE_QUANT['ReportIon']:
@@ -42,6 +42,6 @@ class ProcessSpectra:
 if __name__ == "__main__":
     TYPE_QUANT = 1
     A4_TYPE_MS2 = 1
-    PATH_MS2 = ""
+    PATH_MS2 = "...sample1_A.raw"
     process = ProcessSpectra()
     process.process(TYPE_QUANT, A4_TYPE_MS2, PATH_MS2)
